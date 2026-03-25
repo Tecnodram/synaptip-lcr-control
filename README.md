@@ -1,4 +1,4 @@
-# SynAptIp LCR Control V3
+# SynAptIp LCR Control V3  
 
 ### Scientific Instrument Control & Nyquist Analysis Platform
 
@@ -6,6 +6,9 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey?logo=windows)
 ![Status](https://img.shields.io/badge/Status-Production--Ready-brightgreen)
 ![License](https://img.shields.io/badge/License-Proprietary-orange)
+[![DOI](https://zenodo.org/badge/1191187505.svg)](https://doi.org/10.5281/zenodo.19212713)
+
+![SynAptIp LCR Control V3 Interface](assets/screenshots/main_ui.png)
 
 **SynAptIp Technologies** · AI · Scientific Software · Instrument Intelligence
 
@@ -155,7 +158,7 @@ Per-run output includes fields such as:
 
 If you use this software in academic or scientific work, please cite:
 
-> SynAptIp Technologies. (2026). *SynAptIp LCR Control V3: Scientific Instrument Control & Nyquist Analysis Platform*. DOI: (pending Zenodo)
+Ramírez Martínez, D. (2026). *SynAptIp LCR Control V3: Scientific Instrument Control & Nyquist Analysis Platform* (Version 3.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19212714
 
 ---
 
