@@ -154,6 +154,51 @@ Per-run output includes fields such as:
 
 ---
 
+## Scientific Methodology
+
+Detailed computational methodology is documented in:
+
+- [docs/methodology/nyquist_method.md](docs/methodology/nyquist_method.md)
+
+---
+
+## Example Datasets and Workflow Validation
+
+Illustrative example datasets and workflow-validation documentation are available at:
+
+- [docs/validation/validation_protocol.md](docs/validation/validation_protocol.md)
+- [docs/validation/dataset_import_log.md](docs/validation/dataset_import_log.md)
+- [docs/validation/validation_log.txt](docs/validation/validation_log.txt)
+- [example_data/](example_data/)
+- [example_outputs/](example_outputs/)
+
+---
+
+## Reproducibility
+
+Step-by-step reproducibility instructions are available in:
+
+- [docs/reproducibility/run_example.md](docs/reproducibility/run_example.md)
+
+---
+
+### Scientific Publication (Draft)
+
+This repository includes a structured scientific documentation draft:
+
+- Abstract
+- Introduction
+- Methods
+- Results
+- Discussion
+- Conclusion
+
+Located in:
+
+- [docs/paper_support/](docs/paper_support/)
+
+---
+
 ## Citation
 
 If you use this software in academic or scientific work, please cite:

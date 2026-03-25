@@ -1,0 +1,28 @@
+SynAptIp LCR Control V3 - Validation Log
+Date: 2026-03-25 01:29:43 -06:00
+
+Section: Dataset Access and Import
+- E:/exports_v2/Resistencia.csv -> example_data/resistance_example.csv : OK, COPIED
+- E:/exports_v2/Capacitor.csv -> example_data/capacitor_example.csv : OK, COPIED
+- E:/exports_v2/Capacitor+Resistencia.csv -> example_data/rc_example.csv : OK, COPIED
+- E:/exports_v2/Capacitor+Resistencia+DCBIAS.csv -> example_data/rc_dcbias_example.csv : OK, COPIED
+
+Section: Example Dataset Processing
+Datasets processed:
+- resistance_example.csv : GENERATED
+- capacitor_example.csv : GENERATED
+- rc_example.csv : GENERATED
+- rc_dcbias_example.csv : GENERATED
+
+Generated files in example_outputs:
+- resistance_example_nyquist_data.csv : GENERATED
+- capacitor_example_nyquist_data.csv : GENERATED
+- rc_example_nyquist_data.csv : GENERATED
+- rc_dcbias_example_nyquist_data.csv : GENERATED
+- nyquist_compare_examples.jpg : GENERATED
+
+Status summary:
+- Overall workflow status: OK
+- Not available items: NONE
+- Skipped items: NONE
+- Failed items: NONE
