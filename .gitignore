@@ -1,0 +1,40 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# PyInstaller
+build/
+dist/
+*.spec.bak
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# OS artifacts
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor / IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Test output
+exports_v3/
+*.jpg
+*.zip
+
+# Packaging build outputs
+packaging/build/
