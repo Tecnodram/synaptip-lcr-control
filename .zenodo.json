@@ -1,0 +1,36 @@
+{
+  "title": "SynAptIp Nyquist Analyzer V3.5.0",
+  "description": "Stable release baseline for SynAptIp Nyquist Analyzer V3.5.0, including validated EIS processing workflows, reproducible exports, and Windows packaging for scientific instrumentation support.",
+  "publication_date": "RELEASE_DATE_PENDING",
+  "version": "3.5.0",
+  "upload_type": "software",
+  "license": "other-proprietary",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Ramírez Martínez, Daniel",
+      "affiliation": "SynAptIp Technologies",
+      "orcid": "https://orcid.org/ORCID_PENDING"
+    }
+  ],
+  "keywords": [
+    "EIS",
+    "Nyquist",
+    "Bode",
+    "LCR",
+    "scientific software",
+    "instrument control"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "CONCEPT_DOI_PENDING",
+      "relation": "isVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "VERSION_DOI_PENDING",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    }
+  ]
+}
