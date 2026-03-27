@@ -180,6 +180,64 @@ Step-by-step reproducibility instructions are available in:
 
 - [docs/reproducibility/run_example.md](docs/reproducibility/run_example.md)
 
+### Scientific Basis
+
+SynAptIp Nyquist Analyzer V3.5 extends the existing impedance workflow with a release-hardened Analysis & Insights module for offline EIS post-processing.
+
+Nyquist analysis plots the real part of impedance on the horizontal axis and the negative imaginary part on the vertical axis:
+
+$$
+Z' = |Z| \cos(\theta)
+$$
+
+$$
+Z'' = |Z| \sin(\theta)
+$$
+
+Where:
+
+- $Z'$ is the real impedance component
+- $Z''$ is the imaginary impedance component
+- Nyquist plots use $-Z''$ on the vertical axis by convention
+- Bode magnitude plots show $|Z|$ as a function of frequency
+- Bode phase plots show $\theta$ as a function of frequency
+
+The V3.5 analysis output also includes derived frequency-domain views of $Z'$, $-Z''$, admittance, and capacitance when the dataset supports those transformations.
+
+### Validation
+
+V3.5 includes a dedicated validation dataset in [validation](validation) using:
+
+- [validation/rc_example.csv](validation/rc_example.csv)
+- [validation/rc_dcbias_example.csv](validation/rc_dcbias_example.csv)
+
+The validation workflow runs the full release pipeline: schema detection, impedance transformation, cleaning, plot generation, interpretation, and metadata export.
+
+Cleaning rules applied by the release pipeline are:
+
+- invalid status removal when a status column is present
+- non-finite value removal in required analysis columns
+- non-positive frequency removal
+- percentile-based outlier filtering, per DC bias group when applicable
+
+The interpretation report is heuristic and should not be treated as a definitive scientific conclusion. It is designed to provide cautious, machine-generated guidance for review.
+
+### Reproducibility
+
+The V3.5 release workflow is reproducible with the bundled validation data:
+
+1. Load a CSV file in the Analysis & Insights tab.
+2. Choose the output folder.
+3. Run analysis.
+4. Inspect the generated `run_YYYYMMDD_HHMMSS` folder.
+5. Review `cleaned/`, `figures/`, `report/`, and `metadata/metadata.json`.
+
+For scripted verification, run the validation script from the repository root:
+
+```bat
+c:/Projects/SynAptIp-LCR-Link-Tester/.venv/Scripts/python.exe validation/validate_v3_5.py
+```
+
 ---
 
 ### Scientific Publication (Draft)

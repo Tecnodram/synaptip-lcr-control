@@ -1,0 +1,14 @@
+SynAptIp LCR Control V3
+Copyright (c) 2026 Daniel Ramírez Martínez
+
+All rights reserved.
+
+This software is proprietary and owned by SynAptIp Technologies.
+
+Permission is granted for academic and non-commercial research use only, subject to explicit request and approval by the author.
+
+Commercial use, redistribution, sublicensing, modification, reverse engineering, or integration into commercial systems is strictly prohibited without prior written authorization.
+
+This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
+
+In no event shall the author or copyright holder be liable for any claim, damages, or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.

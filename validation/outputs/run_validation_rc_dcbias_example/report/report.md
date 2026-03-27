@@ -1,0 +1,27 @@
+# SynAptIp Nyquist Analyzer V3.5 — Analysis Report
+
+**SynAptIp Technologies**
+
+| Field | Value |
+|-------|-------|
+| Generated | 2026-03-26 21:28:22 |
+| Source | `rc_dcbias_example.csv` |
+| Version | 3.5.0 |
+
+---
+
+## Findings
+
+1. The cleaned dataset contains 294 valid measurement points after the cleaning pipeline removed 6 points (2.0%).
+2. The impedance response appears mixed resistive-capacitive (median θ ≈ -16.4°). The median phase angle is between 0° and −90°, suggesting a mixed resistive-capacitive character.
+3. The Nyquist plot appears to describe a significant arc in the −Z'' direction, which is consistent with a capacitive loop or charge-transfer process.
+4. The minimum Z' value is approximately 729.52 Ω, which may be consistent with a finite series resistance contribution.
+5. The maximum −Z'' value of 422 Ω occurs near 98.1 kHz, which may suggest a characteristic relaxation frequency associated with the dominant time constant.
+6. The dataset contains 3 distinct DC bias conditions (0 V, 0.5 V, 1 V). Comparative Nyquist and Bode plots are available in the figures folder to assess how the impedance spectrum varies with bias.
+7. No strong variation in median Z' was detected across the DC bias conditions. The impedance response may be relatively stable with bias.
+
+---
+
+## Disclaimer
+
+This report is generated automatically from numerical analysis. All statements use cautious, hedged language and should not be treated as definitive engineering or scientific conclusions. Human expert review is recommended for critical applications.

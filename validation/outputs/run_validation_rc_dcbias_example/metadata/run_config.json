@@ -1,0 +1,7 @@
+{
+  "input_file": "C:\\Projects\\SynAptIp-LCR-Link-Tester\\validation\\rc_dcbias_example.csv",
+  "output_dir": "C:\\Projects\\SynAptIp-LCR-Link-Tester\\validation\\outputs",
+  "selected_outputs": "all",
+  "group_col": "dc_bias_v",
+  "timestamp": "validation_rc_dcbias_example"
+}

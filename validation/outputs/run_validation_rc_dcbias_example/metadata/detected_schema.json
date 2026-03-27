@@ -1,0 +1,14 @@
+{
+  "impedance_mode": "z_theta",
+  "column_map": {
+    "freq_hz": "freq_hz",
+    "z_ohm": "z_ohm",
+    "theta_deg": "theta_deg",
+    "dc_bias": "dc_bias_v",
+    "status": "status"
+  },
+  "has_dc_bias": true,
+  "has_status": true,
+  "has_freq": true,
+  "warnings": []
+}

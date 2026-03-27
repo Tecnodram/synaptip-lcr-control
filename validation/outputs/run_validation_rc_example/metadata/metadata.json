@@ -1,0 +1,54 @@
+{
+  "app_version": "3.5.0",
+  "timestamp": "validation_rc_example",
+  "input_filename": "rc_example.csv",
+  "normalization_applied": true,
+  "dc_bias_grouping_used": true,
+  "detected_schema": {
+    "impedance_mode": "z_theta",
+    "column_map": {
+      "freq_hz": "freq_hz",
+      "z_ohm": "z_ohm",
+      "theta_deg": "theta_deg",
+      "dc_bias": "dc_bias_v",
+      "status": "status"
+    },
+    "has_dc_bias": true,
+    "has_status": true,
+    "has_freq": true,
+    "warnings": []
+  },
+  "cleaning_summary": {
+    "global": {
+      "points_raw": 100,
+      "points_clean": 97,
+      "points_removed": 3,
+      "percent_removed": 3.0
+    },
+    "per_group": [
+      {
+        "group": 0.0,
+        "points_raw": 100,
+        "points_clean": 97,
+        "points_removed": 3,
+        "percent_removed": 3.0
+      }
+    ]
+  },
+  "plots_generated": [
+    "admittance_mag",
+    "admittance_phase",
+    "bode_mag_comparative",
+    "bode_phase_comparative",
+    "capacitance_parallel",
+    "capacitance_series",
+    "minus_z_imag_vs_freq",
+    "nyquist_clean_comparative",
+    "nyquist_freq_colored_0V_0V",
+    "nyquist_freq_colored_comparative",
+    "nyquist_individual_0V",
+    "nyquist_raw_vs_clean",
+    "z_real_vs_freq"
+  ],
+  "warnings_detected": []
+}
