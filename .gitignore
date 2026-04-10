@@ -38,3 +38,27 @@ exports_v3/
 
 # Packaging build outputs
 packaging/build/
+
+# =============================================================
+# LICENSING — PRIVATE
+# Signing secrets, license generators, and issued .lic files
+# must NEVER appear in the public repository.
+# =============================================================
+licenses/
+*.lic
+tools/generate_license.py
+tools/show_fingerprint.py
+src_v3_6/licensing/
+src_v3/services/license_manager.py
+src_v3/services/device_fingerprint.py
+
+# Release staging folders
+release_v3_6/
+release_v3_6_1/
+
+# Validation scratch output
+validate_out.txt
+validate_err.txt
+
+# Claude Code internal
+.claude/
