@@ -1,29 +1,18 @@
 cff-version: 1.2.0
-title: SynAptIp Nyquist Analyzer V3.5.0
+title: SynAptIp LCR Link Tester V3.6.1
 message: If you use this software, please cite it using the metadata below.
 type: software
-version: 3.5.0
-date-released: "RELEASE_DATE_PENDING"
-repository-code: https://github.com/your-org/SynAptIp-LCR-Link-Tester
+version: 3.6.1
+date-released: "2026-04-14"
+repository-code: https://github.com/Tecnodram/synaptip-lcr-control
 license: LicenseRef-Proprietary
 authors:
   - family-names: Ramírez Martínez
     given-names: Daniel
     affiliation: SynAptIp Technologies
-    orcid: https://orcid.org/ORCID_PENDING
 keywords:
   - electrochemical impedance spectroscopy
   - nyquist analysis
   - bode analysis
   - lcr instrumentation
   - scientific software
-preferred-citation:
-  type: software
-  title: SynAptIp Nyquist Analyzer V3.5.0
-  authors:
-    - family-names: Ramírez Martínez
-      given-names: Daniel
-  version: 3.5.0
-  date-released: "RELEASE_DATE_PENDING"
-  url: https://github.com/your-org/SynAptIp-LCR-Link-Tester
-  doi: VERSION_DOI_PENDING
