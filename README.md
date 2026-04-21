@@ -1,4 +1,4 @@
-# SynAptIp LCR Link Tester — V3.6.1
+# SynAptIp LCR Link Tester — V4.1.0
 
 ### Scientific Instrument Control & Nyquist Analysis Platform
 
@@ -14,15 +14,22 @@
 
 ---
 
+> **To use this software you need a license.**
+> Contact **synaptip.tech@gmail.com** to request one — evaluation licenses are free.
+> See [License & Evaluation](#license--evaluation) for the full process.
+
+---
+
 ## Overview
 
 SynAptIp LCR Link Tester is a scientific desktop application for impedance
 workflows and Nyquist analysis. It is compatible with LCR instruments supporting
 SCPI communication and designed for repeatable frequency-domain characterization.
 
-V3.6.1 is the current production release. It extends the V3.5 analysis platform
-with a professional license system and a 10-plot scientific Compare tab.
-V3, V3.5, and V3.6 share a strict additive architecture — no existing behavior
+V4.1.0 is the current production release. It builds on V3.7 (logarithmic sweep
+modes, publication-grade plots) and V4 (redesigned UI) with a reorganized
+Sweep Controls panel and vertical scrolling in Control & Scan.
+All versions share a strict additive architecture — no existing behavior
 was modified between versions.
 
 ---
@@ -32,15 +39,17 @@ was modified between versions.
 | Feature | Details |
 |---|---|
 | Instrument communication | SCPI serial over standard COM interfaces |
-| Frequency sweep automation | Configurable start / stop / step (Hz, kHz, MHz) |
+| Frequency sweep automation | Linear, exact spectroscopy (101 pts), adaptive logarithmic (user PPO) |
+| Log Sweep Designer | Interactive PPO configuration with real-time preview and JSON export |
 | DC bias control | Per-sweep bias list workflow with settle delays |
 | Single measurement | One-shot FETC? acquisition for quick checks |
 | Live results display | Real-time table with Z, theta, and status columns |
-| CSV export | Structured per-run export with sample metadata |
+| CSV export | Structured per-run export with optional PPO metadata |
 | Nyquist transform | Z_real / Z_imag computation from Z-theta raw data |
 | Analysis & Insights | EIS post-processing: cleaning, plots, interpretation report |
 | **Compare tab** | **10-plot scientific multi-file comparison dashboard** |
 | Pattern Summary | Per-file f_c, tau, R_dc, behavior classification |
+| Publication plots | PNG ≥300 DPI, PDF vector, colorblind-safe palette |
 | Offline-first | Local processing, no cloud dependency |
 | License system | Offline device-bound .lic activation |
 | Windows EXE | Single-file .exe via PyInstaller |
@@ -88,27 +97,23 @@ SynAptIp LCR Link Tester is a general-purpose platform for:
 
 ## License & Evaluation
 
-V3.6.1 requires a valid license file (`.lic`) to run. The license is
-device-bound and loaded through the application's built-in license dialog at
-startup.
+This software requires a valid license file (`.lic`) to run. The license is
+device-bound and issued personally by SynAptIp Technologies.
 
-**V3.6.1 does not include an automatic free trial.** Evaluation access is
-available on request at no cost.
+**There is no automatic free trial — but evaluation licenses are free on request.**
 
-### Requesting an Evaluation License
+### How to Request a License
 
-1. Launch `SynAptIp_Nyquist_Analyzer_V3_6.exe`.
-2. When the license dialog appears, locate and copy the **Device Fingerprint**
-   displayed in the dialog.
-3. Email the fingerprint to **synaptip.tech@gmail.com** with a brief description
-   of your use case (research, academic, commercial evaluation, etc.).
-4. You will receive a `.lic` file by return email.
+1. Launch the application (e.g. `SynAptIp_Nyquist_Analyzer_V4_1.exe`).
+2. When the license dialog appears, copy the **Device Fingerprint** shown.
+3. Send it to **synaptip.tech@gmail.com** with a brief description of your
+   use case (academic research, commercial evaluation, personal use, etc.).
+4. You will receive a `.lic` file by email.
 5. In the license dialog, click **Load License File**, select the `.lic` file,
    and the application will unlock.
 
 Evaluation licenses are time-limited. The expiry date is shown in the license
-dialog once a license is loaded. A streamlined self-service evaluation flow is
-planned for a future version.
+dialog once loaded.
 
 ---
 
@@ -117,8 +122,8 @@ planned for a future version.
 Requires Python 3.11+ and Git.
 
 ```bash
-git clone https://github.com/your-org/SynAptIp-LCR-Link-Tester.git
-cd SynAptIp-LCR-Link-Tester
+git clone https://github.com/Tecnodram/synaptip-lcr-control.git
+cd synaptip-lcr-control
 
 python -m venv .venv
 .venv\Scripts\activate
@@ -126,33 +131,33 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Run from source (V3.6):
+Run from source (V4.1 — current):
 
 ```bash
-python src_v3_6/lcr_control_v3_6.py
+python src_v4_1/lcr_control_v4_1.py
 ```
 
 ---
 
 ## Build Executable
 
-Build the V3.6 Windows executable:
+Build the V4.1 Windows executable:
 
 ```bat
-.\build_v3_6.bat
+.\build_v4_1.bat
 ```
 
 Output:
 
 ```text
-dist\SynAptIp_Nyquist_Analyzer_V3_6.exe
+dist\SynAptIp_Nyquist_Analyzer_V4_1\SynAptIp_Nyquist_Analyzer_V4_1.exe
 ```
 
 ---
 
 ## Running the Software
 
-1. Double-click `SynAptIp_Nyquist_Analyzer_V3_6.exe`
+1. Double-click `SynAptIp_Nyquist_Analyzer_V4_1.exe`
 2. The license dialog appears — copy the Device Fingerprint shown
 3. Request a `.lic` file as described in [License & Evaluation](#license--evaluation)
 4. Load the `.lic` file in the dialog — the application unlocks fully
@@ -224,22 +229,20 @@ Scripted validation (V3.5 engine):
 ## Project Structure
 
 ```text
-src_v3_6/              V3.6 entry point and UI (Compare tab, license dialog)
-  lcr_control_v3_6.py  Entry point
-  ui_v36/              Main window, Compare tab, license dialog
-src_v3_5/              V3.5 analysis engine (unchanged)
-  analysis_engine/     EIS pipeline: schema detection, transform, cleaning, plots
-  ui_v35/              Analysis & Insights panel
-src_v3/                V3 base (unchanged)
-  services/            Instrument, CSV, Nyquist services
-  ui/                  Base main window
-docs/                  Methodology, theory, validation, release notes
+src_v4_1/              V4.1 — current stable release (Sweep Controls reorganized)
+src_v4/                V4 — vertical scroll UI base
+src_v3_7/              V3.7 — logarithmic sweep + publication-grade plots
+  services_v37/        Publication plot utilities
+  ui_v37/              Log Sweep Designer, Compare panel, main window
+src_v3_6/              V3.6 — license system + 10-plot Compare tab
+src_v3_5/              V3.5 — EIS analysis engine
+src_v3/                V3 — base instrument/CSV/Nyquist services
+docs/                  Methodology, theory, release notes
 assets/icons/          Application icons
 example_data/          Example CSV input files
 example_outputs/       Reference output plots and CSVs
-validation/            Validation scripts and datasets
-build_v3_6.bat         V3.6 build script
-lcr_control_v3_6.spec  PyInstaller spec
+build_v4_1.bat         V4.1 build script (current)
+lcr_control_v4_1.spec  PyInstaller spec (current)
 requirements.txt       Python dependencies
 ```
 
@@ -266,7 +269,7 @@ Compare tab:
 If you use this software in academic or scientific work, please cite:
 
 Ramírez Martínez, D. (2026). *SynAptIp LCR Link Tester: Scientific Instrument
-Control & Nyquist Analysis Platform* (Version 3.6.1) [Software]. Zenodo.
+Control & Nyquist Analysis Platform* (Version 4.1.0) [Software]. Zenodo.
 https://doi.org/10.5281/zenodo.19212714
 
 ---
