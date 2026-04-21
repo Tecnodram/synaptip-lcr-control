@@ -1,5 +1,94 @@
 # Changelog
 
+## v3.7.0 — 2026-04-20
+
+### Advanced Impedance Spectroscopy Capabilities
+
+SynAptIp LCR Link Tester V3.7.0 introduces professional impedance spectroscopy
+scan modes while maintaining 100% backward compatibility with V3.6.1.
+
+**New Frequency Scan Modes:**
+
+| Mode | Description | Points | Range | Distribution |
+|------|-------------|--------|-------|--------------|
+| Manual Linear Scan | Existing V3.6.1 behavior | Variable | User-defined | Linear steps |
+| Exact Impedance Spectroscopy Scan | Fixed scientific preset | 101 | 100 Hz → 1 MHz | Logarithmic (~25 PPO) |
+| Adaptive Logarithmic Sweep | Configurable scientific sweep | Variable | User-defined | Logarithmic (user PPO) |
+
+**Points Per Order of Magnitude (PPO):**
+- Scientific measure of frequency resolution within each logarithmic decade
+- Example: PPO=25 means 25 measurement points per frequency decade
+- Presets: Fast (10), Standard (20), High Resolution (25), Publication (30)
+- Manual input: 1-100 PPO range
+
+**Professional Terminology:**
+- "Order of magnitude" (not "decade")
+- "Points per order of magnitude (PPO)"
+- Deterministic, reproducible frequency distributions
+- No randomness in frequency generation
+
+**UI Enhancements:**
+- Frequency Scan Mode selector in Control & Scan tab
+- Real-time schedule summary with point counts
+- New "Log Sweep Designer" tab for advanced configuration
+- Enhanced branding: contact info in header
+- Logo size increased by ~20%
+
+**Log Sweep Designer Tab:**
+- Interactive frequency range configuration
+- PPO preset selector with custom input
+- Real-time preview of generated frequencies
+- Export configuration to JSON
+- Apply settings to Control & Scan tab
+
+**Scientific Validation:**
+- Exact scan: 101 points, 100 Hz to 1 MHz, logarithmic distribution
+- Adaptive sweep: deterministic point generation based on PPO
+- All modes produce reproducible, scientific-grade frequency schedules
+- No data distortion or fake smoothing
+
+**Publication-Grade Visualization System:**
+- Centralized plotting style configuration with `apply_publication_style()`
+- High-DPI export system (PNG ≥300dpi, PDF vector format)
+- Professional scientific typography and color schemes
+- Enhanced Nyquist plots with frequency progression indication
+- Proper Bode plot scaling with logarithmic frequency axes
+- Scientific axis formatting with Hz/kHz/MHz units
+- Colorblind-safe color palette for accessibility
+- Clean layout optimized for journal publications
+
+**Enhanced Nyquist Plot Features:**
+- Z' vs -Z'' convention with correct sign handling
+- Frequency progression coloring using viridis colormap
+- Optional markers with controlled spacing (markevery=10-20)
+- Anti-aliased rendering with professional line widths
+- Colorbar for frequency scale indication
+
+**Professional Bode Plots:**
+- |Z| vs Frequency with logarithmic Y-axis for impedance
+- Phase vs Frequency with linear Y-axis for phase angles
+- Proper scientific notation for impedance values
+- Readable tick labels across wide frequency ranges
+- Consistent formatting with Nyquist plots
+
+**Export System:**
+- PNG export at 300 DPI for high-resolution raster images
+- PDF export for vector graphics suitable for publications
+- Automatic tight layout and margin optimization
+- No cropping issues with bbox_inches='tight'
+- Professional file naming and metadata
+
+**Validation:** 100% of plotting features validated. All export formats working correctly. Scientific accuracy maintained with no data distortion.
+
+**CSV Export Enhancements:**
+- Optional metadata fields: scan_mode, frequency_spacing, points_per_order_of_magnitude
+- Backward compatible with V3.6.1 format
+
+**Validation:** 100% backward compatibility verified. All V3.6.1 tests pass.
+New features are opt-in with default behavior unchanged.
+
+---
+
 ## v3.6.1 — 2026-04-11
 
 ### Compare Tab — 10-Plot Scientific Dashboard

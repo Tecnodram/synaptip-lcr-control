@@ -60,5 +60,24 @@ release_v3_6_1/
 validate_out.txt
 validate_err.txt
 
+# Local validation and test scripts (not for public repo)
+validate_v3_7.py
+validate_v3_7_functional.py
+validate_v3_7_plotting.py
+V3.7.0_MANUAL_TEST_CHECKLIST.*
+V3.7.0_MANUAL_TEST_CHECKLIST.py
+
+# Demo-generated output (PDFs/PNGs produced locally)
+demo_output/
+
+# Broken or versioned virtual environments
+.venv_broken_*/
+
+# Temp import test files
+.tmp_import_test.py
+
+# Zenodo backup (local only)
+.zenodo.backup.json
+
 # Claude Code internal
 .claude/
